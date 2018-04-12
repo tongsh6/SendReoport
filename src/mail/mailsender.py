@@ -9,6 +9,7 @@ from util.logutil import logger
 from config import configs
 from email.mime.text import MIMEText
 from email.header import Header
+# -*- coding: utf-8 -*-
 
 
 class MailSender():
@@ -32,11 +33,9 @@ class MailSender():
 
     def get_ccinfos(self):
         return configs['ccmailinfo']
-    
 
     def get_subject(self):
         return configs['subject']
-    
     
     def sendReport(self, report=None):
         if report is None:

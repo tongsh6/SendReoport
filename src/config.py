@@ -3,6 +3,8 @@ Created on 2018年4月9日
 
 @author: Loong
 '''
+# -*- coding: utf-8 -*-
+
 configs = {
     'sendmailinfo': {
         'user': 'tongshuanglong@nstc.com.cn',
