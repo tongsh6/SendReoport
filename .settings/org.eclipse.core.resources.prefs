@@ -2,4 +2,5 @@ eclipse.preferences.version=1
 encoding//src/config.py=UTF-8
 encoding//src/mail/mailsender.py=utf-8
 encoding//src/main.py=utf-8
-encoding//src/spider/spider.py=UTF-8
+encoding//src/spider/spider.py=utf-8
+encoding//src/util/logutil.py=utf-8
