@@ -4,9 +4,9 @@ Created on 2018年4月6日
 
 @author: Loong
 '''
-from spider.spider import Spider
 from mail.mailsender import MailSender
 from util.logutil import logger
+from spider.spider import Spider
 
 
 class ReportMain():

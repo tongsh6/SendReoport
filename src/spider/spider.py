@@ -34,7 +34,10 @@ class Spider():
     def create_developer_url(self, developer):
         return developer
 
-    def get_statistics_cust(self, url):
+    def get_statistics_cust(self, custname):
+        url = self.create_url_dev(custname);
+        html = urlopen(url)
+        bsObj = BeautifulSoup(html, "html.parser");
         return {'custname':url, 'num1':'1', 'num2':'2', 'num3':'3', 'num4':'4'}
     
     def do_statistics_cust(self):
@@ -46,7 +49,8 @@ class Spider():
             statistics_cust.append(custstatistics)
         return statistics_cust
 
-    def get_statistics_dev(self, url):
+    def get_statistics_dev(self, developer):
+        url = self.create_url_dev(developer);
         html = urlopen(url)
         bsObj = BeautifulSoup(html, "html.parser");
         return {'devname':url, 'num1':'1', 'num2':'2', 'num3':'3', 'num4':'4'}
@@ -86,7 +90,7 @@ class Spider():
         report += "<th>" + "总计" + "</th>" 
         report += "<th>" + 2 + "</th>" 
         report += "<th>" + 3 + "</th>" 
-        report += "<th>" + 4+ "</th>" 
+        report += "<th>" + 4 + "</th>" 
         report += "<th>" + 5 + "</th>" 
         report += "</tr>"      
         report += "</table>"  
@@ -114,7 +118,7 @@ class Spider():
         report += "<th>" + "总计" + "</th>" 
         report += "<th>" + 2 + "</th>" 
         report += "<th>" + 3 + "</th>" 
-        report += "<th>" + 4+ "</th>" 
+        report += "<th>" + 4 + "</th>" 
         report += "<th>" + 5 + "</th>" 
         report += "</tr>"                
         report += "</table>"    
