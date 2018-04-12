@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Created on 2018年4月6日
 
@@ -80,7 +81,14 @@ class Spider():
             report += "<td>" + cust['num2'] + "</td>" 
             report += "<td>" + cust['num3'] + "</td>" 
             report += "<td>" + cust['num4'] + "</td>" 
-            report += "</tr>" 
+            report += "</tr>"
+        report += "<tr style='background-Color:#DDDDDD'>" 
+        report += "<th>" + "总计" + "</th>" 
+        report += "<th>" + 2 + "</th>" 
+        report += "<th>" + 3 + "</th>" 
+        report += "<th>" + 4+ "</th>" 
+        report += "<th>" + 5 + "</th>" 
+        report += "</tr>"      
         report += "</table>"  
         
         report += "<br/>"  
@@ -101,7 +109,14 @@ class Spider():
             report += "<td>" + dev['num2'] + "</td>" 
             report += "<td>" + dev['num3'] + "</td>" 
             report += "<td>" + dev['num4'] + "</td>" 
-            report += "</tr>"             
+            report += "</tr>"
+        report += "<tr style='background-Color:#DDDDDD'>" 
+        report += "<th>" + "总计" + "</th>" 
+        report += "<th>" + 2 + "</th>" 
+        report += "<th>" + 3 + "</th>" 
+        report += "<th>" + 4+ "</th>" 
+        report += "<th>" + 5 + "</th>" 
+        report += "</tr>"                
         report += "</table>"    
         report += "</body>"
         return report

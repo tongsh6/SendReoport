@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 Created on 2018年4月8日
 
@@ -5,6 +6,7 @@ Created on 2018年4月8日
 '''
 import logging
 from logging.handlers import RotatingFileHandler
+from config import configs
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -16,8 +18,14 @@ formatter = logging.Formatter('[%(levelname)s] %(asctime)s %(name)-12s [%(filena
 # handler.setFormatter(formatter)
 # add thehandlers to the logger
 
+
+def get_log_path():
+    return configs["log_path"]
+
+
+log_path= get_log_path()+"send_report.log";
 #定义一个RotatingFileHandler，最多备份5个日志文件，每个日志文件最大10M
-Rthandler = RotatingFileHandler('E:\logs\send_report.log', maxBytes=10*1024*1024,backupCount=15)
+Rthandler = RotatingFileHandler(log_path, maxBytes=10*1024*1024,backupCount=15)
 Rthandler.setFormatter(formatter)
 
 logger.addHandler(Rthandler)
